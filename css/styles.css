@@ -1,0 +1,320 @@
+
+@import 'mediaqueries.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* SCROLL mediante el menu va a una parte de la pagina q tiene el contenido clickeado*/
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.hero {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../img/vectores/vector-1.png);
+	/*estas 2 propiedades se utilizan para q la imagen no se repita y se rellene el espacio vacio que dejan*/
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.navbar{
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	padding: 30px;
+}
+
+.navbar .brand {
+	color: #f7b733;
+
+}
+
+.navbar .brand h2 {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.navbar .menu{
+	grid-column: 6/9;
+	display: flex;
+	margin-top: 12px;	 
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu li a {
+	text-decoration: none;
+	margin-right: 3em;
+	font-size: 1.3em;
+	color: #fff;
+	font-weight: 300;
+	padding: 10px 20px;
+
+
+}
+
+.menu li a:hover {
+	background-color: #f7b733;
+	transition: all .5s;
+	color: #000;
+	border-radius: 20px;
+	border: none;
+}
+
+.menu-bar {
+	display: none;
+}
+
+/* SECCION MAIN*/
+
+.main {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.content-info {
+	margin-top: 5em;
+	color: #fff;
+}
+
+button {
+
+	cursor: pointer;
+	color: #fff;
+	box-shadow: 0px 3px 14px -8px rgba(0, 0, 0, 0.78);	
+}
+
+button:hover {
+	box-shadow: none;
+
+}
+
+.btn-toBuy, .read-more {
+	background-color: #ca4172;
+	padding: 8px 40px;
+	font-size: 1.2em;
+	border-radius: 20px;
+	border: none;
+}
+
+.read-more {
+	background: none;
+	border: 1px solid #fff;
+	margin: 20px;
+}
+
+.main img {
+	margin-top: 6em;
+}
+
+
+/* About section */
+
+.about h2 {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	margin-top: 10em;
+}
+
+/* LINEA SUBRAYADO DE ACERCA DE NOSOTROS */
+.about .divider{
+	background-color: #ca4172;
+	width: 50px;
+	height: 3px;
+	margin: 0 auto;
+}
+
+.about .about-content {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+.about .about-content h3 {
+	text-transform: uppercase;
+	/*para crear separacion de elementos*/
+	margin-bottom: 1em;		 
+}
+
+/* SECCCION PRODUCTOS */
+
+.productos {
+	width: 90%;
+	margin: 0 auto;
+	/*margen abajo*/
+	margin-bottom: 5em;
+}
+
+.row .container-productos{
+	/*margen arriba*/
+	margin-top: 2em;
+
+}
+
+
+.productos .divider{
+	background-color: #ca4172;
+	width: 50px;
+	height: 3px;
+	margin: 0 auto;
+
+}
+
+.row .container-productos {
+	display: flex;
+	/*espacio entre cada elemento*/
+	justify-content: space-around;
+	/*coloca uno debajo del otro */
+	flex-wrap: wrap;
+
+}
+
+.container-productos .content-productos-info, .content-precio{
+	/*alineacion en una sola linea de 2 elementos*/
+	display: flex;
+}
+
+.content-precio .precio-viejo {
+	/*tacha el TEXTO*/
+	text-decoration: line-through;
+	font-weight: lighter;
+	/*margen derecho*/
+	margin-right: 20px;
+
+}
+
+.content-precio .precio-nuevo {
+	background-color: #ca4172;
+	padding: 5px 10px;
+	color: #fff;
+}
+
+/*centrar todo el contenido*/
+article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4em;
+}
+
+.content-productos-info {
+	margin-top: 20px;
+}
+
+.content-productos-info h4{
+	text-transform: uppercase;
+	margin-left: 20px ;
+
+}
+
+.productos .btn-producto{
+	margin: 20px;
+	padding: 10px 30px;
+	border-radius: 20px;
+	border: none;
+	color: black;
+}
+
+/* SECCCION SOPORTE */
+
+.soporte {
+	background-color: #ca4172;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/*espacio de arriba*/
+	padding-top: 50px;
+}
+
+.soporte h2 {
+	font-size: 3em;
+	font-weight: lighter;
+}
+
+.soporte .read-more {
+	margin-left: .2em;
+}
+
+/* SECCCION BANNER */
+
+.banner {
+	background-image: url(../img/banner.jpeg);
+	/*estas 2 propiedades se utilizan para q la imagen no se repita y se rellene el espacio vacio que dejan*/
+	background-repeat: no-repeat; 
+	background-position: auto;
+	background-size: cover;
+	/*para que crezca la imagen*/
+	height: 100vh;
+	height: 100vh;
+	max-width: 100%;
+	align-items: center;
+	display: grid; 
+	grid-template-columns: repeat(11, 1fr);
+}
+
+.banner .rating {
+	/*mover elementos en columnas*/
+	grid-column: 3/4;
+
+}
+
+.banner .rating h2 {
+	text-align: center;
+}
+
+.banner .secundary-info {
+	/*mover elementos en columnas*/
+	grid-column: 8/11;
+}
+
+.banner h2 {
+	font-size: 3em;
+}
+
+.secundary-info h2, 
+.secundary-info h3 {
+	margin-bottom: 10px;
+}
+
+/* SECCCION BANNER */
+
+.footer {
+	background-color: #8c50f1;
+	color: #fff;
+	padding: 30px;
+	/*mover elementos en filas*/
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer .menu li {
+	margin-top: 20px;
+}
+
+.footer .social-network .fab {
+	font-size: 1.8em;
+	/*separar elementos continuos*/
+	margin: 10px;
+}
+
+.footer .social-network .fab:hover{
+	color: #f7b733;
+	cursor: pointer;
+}
+
